@@ -1,0 +1,132 @@
+name: Receive Package
+
+on:
+  repository_dispatch:
+    types: [package-release]
+
+jobs:
+  update-repos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y reprepro createrepo-c
+
+      - name: Import GPG key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.LINUX_PACKAGES_GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.LINUX_PACKAGES_GPG_PASSPHRASE }}
+        run: |
+          echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+
+          # Get the key ID
+          KEY_ID=$(gpg --list-secret-keys --keyid-format LONG | grep sec | head -1 | awk '{print $2}' | cut -d'/' -f2)
+          echo "GPG_KEY_ID=$KEY_ID" >> $GITHUB_ENV
+
+          # Configure gpg-agent for non-interactive signing
+          mkdir -p ~/.gnupg
+          echo "allow-preset-passphrase" >> ~/.gnupg/gpg-agent.conf
+          gpg-connect-agent reloadagent /bye
+
+          # Preset the passphrase
+          KEYGRIP=$(gpg --list-secret-keys --with-keygrip | grep -A1 "^sec" | grep Keygrip | awk '{print $3}')
+          echo "$GPG_PASSPHRASE" | /usr/lib/gnupg/gpg-preset-passphrase --preset "$KEYGRIP"
+
+      - name: Download packages from release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACKAGE: ${{ github.event.client_payload.package }}
+          VERSION: ${{ github.event.client_payload.version }}
+          REPO: ${{ github.event.client_payload.repo }}
+        run: |
+          VERSION_NUM=${VERSION#v}  # Remove 'v' prefix if present
+
+          echo "Downloading packages for $PACKAGE version $VERSION from $REPO"
+
+          # Download .deb files
+          gh release download "$VERSION" \
+            --repo "$REPO" \
+            --pattern "*.deb" \
+            --dir ./downloads || echo "No .deb files found"
+
+          # Download .rpm files
+          gh release download "$VERSION" \
+            --repo "$REPO" \
+            --pattern "*.rpm" \
+            --dir ./downloads || echo "No .rpm files found"
+
+          echo "Downloaded files:"
+          ls -la ./downloads/ || echo "No files downloaded"
+
+      - name: Update APT repository
+        env:
+          PACKAGE: ${{ github.event.client_payload.package }}
+        run: |
+          if ls ./downloads/*.deb 1> /dev/null 2>&1; then
+            echo "Adding .deb packages to APT repository"
+
+            for deb in ./downloads/*.deb; do
+              echo "Adding $deb"
+              reprepro -b apt includedeb stable "$deb"
+            done
+
+            echo "APT repository updated"
+          else
+            echo "No .deb packages to add"
+          fi
+
+      - name: Update RPM repository
+        run: |
+          if ls ./downloads/*.rpm 1> /dev/null 2>&1; then
+            echo "Adding .rpm packages to RPM repository"
+
+            # Copy RPM files
+            cp ./downloads/*.rpm rpm/packages/
+
+            # Sign RPM packages
+            for rpm in rpm/packages/*.rpm; do
+              if [ -f "$rpm" ]; then
+                echo "Signing $rpm"
+                rpm --addsign "$rpm" || echo "Warning: Could not sign $rpm (rpm signing may not be configured)"
+              fi
+            done
+
+            # Regenerate repo metadata
+            createrepo_c --update rpm/packages
+
+            # Sign the repo metadata
+            gpg --batch --yes --detach-sign --armor rpm/packages/repodata/repomd.xml
+
+            echo "RPM repository updated"
+          else
+            echo "No .rpm packages to add"
+          fi
+
+      - name: Cleanup downloads
+        run: rm -rf ./downloads
+
+      - name: Commit and push
+        env:
+          PACKAGE: ${{ github.event.client_payload.package }}
+          VERSION: ${{ github.event.client_payload.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "feat: update $PACKAGE to $VERSION"
+            git push
+          fi
