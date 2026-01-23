@@ -1,0 +1,7 @@
+Origin: Open CLI Collective
+Label: Open CLI Collective
+Codename: stable
+Architectures: amd64 arm64
+Components: main
+Description: Open CLI Collective APT Repository
+SignWith: yes
