@@ -46,19 +46,36 @@ jobs:
           # Configure GPG for non-interactive use
           mkdir -p ~/.gnupg
           chmod 700 ~/.gnupg
-          echo "use-agent" >> ~/.gnupg/gpg.conf
-          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
-          echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
+
+          # Create passphrase file for gpg-agent
+          echo "$GPG_PASSPHRASE" > ~/.gnupg/passphrase
+          chmod 600 ~/.gnupg/passphrase
+
+          # Configure gpg and gpg-agent
+          cat > ~/.gnupg/gpg.conf << 'GPGCONF'
+          use-agent
+          batch
+          pinentry-mode loopback
+          passphrase-file /home/runner/.gnupg/passphrase
+          GPGCONF
+
+          cat > ~/.gnupg/gpg-agent.conf << 'AGENTCONF'
+          allow-loopback-pinentry
+          allow-preset-passphrase
+          AGENTCONF
+
+          # Restart gpg-agent
+          gpgconf --kill gpg-agent || true
 
           # Import the key
           echo "$GPG_PRIVATE_KEY" | gpg --batch --import
 
-          # Get the key ID and export for later steps
+          # Get the key ID
           KEY_ID=$(gpg --list-secret-keys --keyid-format LONG | grep sec | head -1 | awk '{print $2}' | cut -d'/' -f2)
           echo "GPG_KEY_ID=$KEY_ID" >> $GITHUB_ENV
 
-          # Export passphrase for later signing steps
-          echo "GPG_PASSPHRASE=$GPG_PASSPHRASE" >> $GITHUB_ENV
+          # Test signing works
+          echo "test" | gpg --batch --sign > /dev/null 2>&1 && echo "GPG signing test passed" || echo "GPG signing test failed"
 
       - name: Download packages from release
         env:
@@ -88,12 +105,9 @@ jobs:
           if ls ./downloads/*.deb 1> /dev/null 2>&1; then
             echo "Adding .deb packages to APT repository"
 
-            # Configure reprepro to pass passphrase to gpg
-            export REPREPRO_GPG_ARGS="--batch --pinentry-mode loopback --passphrase-fd 3"
-
             for deb in ./downloads/*.deb; do
               echo "Adding $deb"
-              echo "$GPG_PASSPHRASE" | reprepro -b apt includedeb stable "$deb" 3<&0
+              reprepro -b apt includedeb stable "$deb"
             done
 
             echo "APT repository updated"
@@ -121,7 +135,7 @@ jobs:
             createrepo_c --update rpm/packages
 
             # Sign the repo metadata
-            echo "$GPG_PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 --pinentry-mode loopback --detach-sign --armor rpm/packages/repodata/repomd.xml
+            gpg --batch --yes --detach-sign --armor rpm/packages/repodata/repomd.xml
 
             echo "RPM repository updated"
           else
