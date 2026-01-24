@@ -154,7 +154,17 @@ jobs:
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
+            echo "HAS_CHANGES=false" >> $GITHUB_ENV
           else
             git commit -m "feat: update $PACKAGE to $VERSION"
             git push
+            echo "HAS_CHANGES=true" >> $GITHUB_ENV
           fi
+
+      - name: Trigger Pages deployment
+        if: env.HAS_CHANGES == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Trigger pages workflow since push from workflow doesn't trigger other workflows
+          gh workflow run pages.yml
