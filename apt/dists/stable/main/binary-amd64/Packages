@@ -1,0 +1,16 @@
+Package: cfl
+Version: 0.10.0
+Architecture: amd64
+License: MIT
+Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
+Installed-Size: 11433
+Homepage: https://github.com/open-cli-collective/confluence-cli
+Priority: optional
+Section: 
+Filename: pool/main/c/cfl/cfl_0.10.0_amd64.deb
+Size: 4551732
+SHA256: 5409d13c24cf544fb8de7491a872e7d44fcd0855a60c7b5b0faf69d1652405fb
+SHA1: 552534e5bf6fa60c6ca356f8ac44ae7c0c4a61ba
+MD5sum: 3d358030c7c71a80f596c7770c98434d
+Description: Command-line interface for Atlassian Confluence Cloud
+

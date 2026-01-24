@@ -1,0 +1,28 @@
+Origin: Open CLI Collective
+Label: Open CLI Collective
+Codename: stable
+Date: Sat, 24 Jan 2026 11:59:57 UTC
+Architectures: amd64 arm64
+Components: main
+Description: Open CLI Collective APT Repository
+MD5Sum:
+ 612fb6facdc0bf83246f882dc7b466c5 540 main/binary-amd64/Packages
+ 777299fc54eaa7f59da11713e7a9d1c6 384 main/binary-amd64/Packages.gz
+ f93fc557e532ce960a4e462f74d1fdce 139 main/binary-amd64/Release
+ 7bdd408adc9d5406979696efd9c430c2 540 main/binary-arm64/Packages
+ a2223b71876b71e8aca640d46f3624be 384 main/binary-arm64/Packages.gz
+ 48140e14670c374fa4a47df7700581f1 139 main/binary-arm64/Release
+SHA1:
+ 2a48251a89482b0bb28926a418195017a9a384b0 540 main/binary-amd64/Packages
+ 6d7f884893d9d1a200dd1da94fd9595456c58309 384 main/binary-amd64/Packages.gz
+ e7a9bf215088d768f3d5a2b8838129502bb8ba6a 139 main/binary-amd64/Release
+ e6bfd748f34bb763830d22d5b6473e701ca05129 540 main/binary-arm64/Packages
+ d0f0b2538179fac9ac490f75e5618efaed8c2a8a 384 main/binary-arm64/Packages.gz
+ c96393e95b0ad91aabebc328051f962459f55d67 139 main/binary-arm64/Release
+SHA256:
+ 8a2b831430258aa8bb312bc28dee3713ab34680e2cb0ec09df63181dc0abeb9b 540 main/binary-amd64/Packages
+ a362f3ce52fef61dd2559daae4a7a16d8ca13876d03b2b388497bfe1925eff17 384 main/binary-amd64/Packages.gz
+ 2922b55811da9036f595a9a71e94080ad262af6201eb2b5080b18f2fa0925425 139 main/binary-amd64/Release
+ b57fa171cc5e31ac8333b877b259c10b50ca8612ebc7f995df87f9d45fe8d5b7 540 main/binary-arm64/Packages
+ ad428f4782eaadb9b9b6017c1cf27b491f86ecf7d384796ccb73c2cdc9ad6b12 384 main/binary-arm64/Packages.gz
+ 0924bf407e9490983bd82d685285268233aed8e8cafbcbdd4cfa10e9ffe72af8 139 main/binary-arm64/Release
