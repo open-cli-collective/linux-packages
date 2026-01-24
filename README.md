@@ -195,6 +195,27 @@ rm private-key.asc  # Delete the private key file - it now lives only in GitHub 
 
 Commit the public key (`keys/gpg.asc`) to this repository.
 
+### Troubleshooting
+
+#### Manually trigger the receive workflow
+
+If a release didn't trigger the workflow automatically, or you need to re-run it:
+
+```bash
+gh workflow run receive-package.yml \
+  --repo open-cli-collective/linux-packages \
+  -f package=cfl \
+  -f version=v0.10.0 \
+  -f repo=open-cli-collective/confluence-cli
+```
+
+Watch the run:
+
+```bash
+gh run list --repo open-cli-collective/linux-packages --limit 1
+gh run watch --repo open-cli-collective/linux-packages
+```
+
 ### Manual Package Addition
 
 To manually add a package (for testing or one-off releases):
