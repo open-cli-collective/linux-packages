@@ -166,7 +166,7 @@ jobs:
       - name: Trigger Pages deployment
         if: env.HAS_CHANGES == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.LINUX_PACKAGES_DISPATCH_TOKEN }}
         run: |
           # Trigger pages workflow since push from workflow doesn't trigger other workflows
           gh workflow run pages.yml
