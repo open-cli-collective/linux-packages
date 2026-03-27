@@ -15,3 +15,20 @@ SHA1: 705c5be3092dc1fd431421f08a6483ffd88206a7
 MD5sum: c53b634f250ca2883df0130bcf3570fc
 Description: Command-line interface for Atlassian Confluence Cloud
 
+Package: jtk
+Version: 1.0.45
+Architecture: amd64
+Architecture-Variant: amd64v1
+License: MIT
+Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
+Installed-Size: 8669
+Homepage: https://github.com/open-cli-collective/atlassian-cli
+Priority: optional
+Section: 
+Filename: pool/main/j/jtk/jtk_1.0.45_amd64.deb
+Size: 3552134
+SHA256: c620455ff587c33605ff10b207571798f25a0f1db7324875af100baa5043c9a9
+SHA1: f9073b2de3ca11916b3b6eca7fffbd80258ba52a
+MD5sum: 5e8ed43ab5abb8d41c6a45baf4012105
+Description: Command-line interface for Jira Cloud
+
