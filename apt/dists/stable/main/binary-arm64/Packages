@@ -46,6 +46,22 @@ SHA1: 36209d1564b4a7745bd93ab25c6d6336b77a7abd
 MD5sum: 7a573aec72cf02668460582d4be55b9a
 Description: Command-line interface for Jira Cloud
 
+Package: sfdc
+Version: 0.1.9
+Architecture: arm64
+License: MIT
+Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
+Installed-Size: 7809
+Homepage: https://github.com/open-cli-collective/salesforce-cli
+Priority: optional
+Section: 
+Filename: pool/main/s/sfdc/sfdc_0.1.9_arm64.deb
+Size: 3148226
+SHA256: f2d4fc7f34c600bdf900a81bf2a36242607b79edb5315fe6082aef483b347cfd
+SHA1: f0fc902ee2c8819a15b55924bfaf3c3383097fa5
+MD5sum: 4b5064efd5ad99208c8c210f32b572bf
+Description: Command-line interface for Salesforce
+
 Package: slck
 Version: 3.1.35
 Architecture: arm64
