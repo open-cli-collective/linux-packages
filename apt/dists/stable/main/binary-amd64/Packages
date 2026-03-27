@@ -32,3 +32,20 @@ SHA1: f9073b2de3ca11916b3b6eca7fffbd80258ba52a
 MD5sum: 5e8ed43ab5abb8d41c6a45baf4012105
 Description: Command-line interface for Jira Cloud
 
+Package: slck
+Version: 3.1.35
+Architecture: amd64
+Architecture-Variant: amd64v1
+License: MIT
+Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
+Installed-Size: 7193
+Homepage: https://github.com/open-cli-collective/slack-chat-api
+Priority: optional
+Section: 
+Filename: pool/main/s/slck/slck_3.1.35_amd64.deb
+Size: 3079542
+SHA256: 271a3fe290214c2de0c2c0eebc5d03c6ef3481774d75a4c73b76153190158607
+SHA1: 76cbac613c2cbad4d4a0d12a0a9f45a01b6670ed
+MD5sum: e3965f1cb142da03c177ba054d1f4194
+Description: Command-line interface for Slack
+
