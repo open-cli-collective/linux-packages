@@ -15,7 +15,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/open-
 
 # Update and install
 sudo apt update
-sudo apt install cfl  # or any package from the table below
+sudo apt install cfl jtk sfdc  # or any package from the table below
 ```
 
 ### Fedora / RHEL / CentOS (DNF)
@@ -32,14 +32,19 @@ gpgkey=https://open-cli-collective.github.io/linux-packages/keys/gpg.asc
 EOF
 
 # Install
-sudo dnf install cfl  # or any package from the table below
+sudo dnf install cfl jtk sfdc  # or any package from the table below
 ```
 
 ## Available Packages
 
 | Package | Description | Source Repo |
 |---------|-------------|-------------|
-| `cfl` | Confluence Cloud CLI | [confluence-cli](https://github.com/open-cli-collective/confluence-cli) |
+| `cfl` | Confluence Cloud CLI | [atlassian-cli](https://github.com/open-cli-collective/atlassian-cli) |
+| `google-readonly` | Google read-only CLI (Gmail, Calendar, Contacts) | [google-readonly](https://github.com/open-cli-collective/google-readonly) |
+| `jtk` | Jira Cloud CLI | [atlassian-cli](https://github.com/open-cli-collective/atlassian-cli) |
+| `nrq` | New Relic CLI | [newrelic-cli](https://github.com/open-cli-collective/newrelic-cli) |
+| `sfdc` | Salesforce CLI | [salesforce-cli](https://github.com/open-cli-collective/salesforce-cli) |
+| `slck` | Slack CLI | [slack-chat-api](https://github.com/open-cli-collective/slack-chat-api) |
 
 ---
 
@@ -108,8 +113,8 @@ Add the new package to the "Available Packages" table above.
 
 ```
 ┌─────────────────────┐
-│   Source Repo       │
-│ (e.g. confluence-cli)│
+│   Source Repo        │
+│ (e.g. atlassian-cli) │
 └─────────┬───────────┘
           │ 1. Release tagged
           ▼
@@ -206,7 +211,7 @@ gh workflow run receive-package.yml \
   --repo open-cli-collective/linux-packages \
   -f package=cfl \
   -f version=v0.10.0 \
-  -f repo=open-cli-collective/confluence-cli
+  -f repo=open-cli-collective/atlassian-cli
 ```
 
 Watch the run:
