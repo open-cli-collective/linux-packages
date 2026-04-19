@@ -61,17 +61,17 @@ MD5sum: 4b5064efd5ad99208c8c210f32b572bf
 Description: Command-line interface for Salesforce
 
 Package: slck
-Version: 3.1.41
+Version: 3.1.42
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 6977
 Homepage: https://github.com/open-cli-collective/slack-chat-api
 Priority: optional
 Section: 
-Filename: pool/main/s/slck/slck_3.1.41_arm64.deb
-Size: 2834958
-SHA256: 2a4c016ea453edfee1329730b43ce6b701f7d066269c324ba1212bc30f283433
-SHA1: b47ceb6293e14adfc04b7b01bd626be9783fecdc
-MD5sum: 9dc5f854571531b4cacfa318726fc276
+Filename: pool/main/s/slck/slck_3.1.42_arm64.deb
+Size: 2843186
+SHA256: c26ea8a242e938497ede016fc5de26e4af58c705b800b5ed13e9f038e7ebd251
+SHA1: db88dc19874caec77d5072fc2d990f3c85c9a5df
+MD5sum: 56a9b66b6592fcbd9437db58df5c5fa4
 Description: Command-line interface for Slack
 
