@@ -30,18 +30,18 @@ MD5sum: bd0bda851f88b374a76e7b810b639c35
 Description: Read-only command-line interface for Google services
 
 Package: jtk
-Version: 1.0.89
+Version: 1.0.90
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 10945
 Homepage: https://github.com/open-cli-collective/atlassian-cli
 Priority: optional
 Section: 
-Filename: pool/main/j/jtk/jtk_1.0.89_arm64.deb
-Size: 4179198
-SHA256: 837c47abf3d9ddc9d670822c18c1886e031cce0bc531c5eb2d54b6afa2bc52a8
-SHA1: 5dd5d473bba5d6ea40e07e280b247241ee991b3b
-MD5sum: be2b996250b6de461b87982bb09e3bac
+Filename: pool/main/j/jtk/jtk_1.0.90_arm64.deb
+Size: 4179356
+SHA256: be70e69120a0785e038bdd0a3746c3282c4743b822befcbd3456ee0a54599f27
+SHA1: a65b52c257f05643cda6c979479b776c19f73458
+MD5sum: 212262c9c1cb24674a89ac03d78024db
 Description: Command-line interface for Jira Cloud
 
 Package: sfdc
