@@ -15,7 +15,7 @@ MD5sum: 21ee7b58f6cfca3492cc6087a44c5562
 Description: Command-line interface for Atlassian Confluence Cloud
 
 Package: google-readonly
-Version: 1.0.42
+Version: 1.0.43
 Architecture: amd64
 Architecture-Variant: amd64v1
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
@@ -23,11 +23,11 @@ Installed-Size: 20197
 Homepage: https://github.com/open-cli-collective/google-readonly
 Priority: optional
 Section: 
-Filename: pool/main/g/google-readonly/google-readonly_1.0.42_amd64.deb
+Filename: pool/main/g/google-readonly/google-readonly_1.0.43_amd64.deb
 Size: 7374998
-SHA256: a5873c68a5b22d6ea4411f207d6736112f8f9b819b3bfd72ef70bd81bbe76a1d
-SHA1: 25579291efd251a88724fba53e30b5642b2a38fe
-MD5sum: bff902d207cdc2ea55e6ff99482ec489
+SHA256: e4cba7fe01bad5ef66741b22fe48d335a864938a408b5e6b8a3f6ded6b647dd6
+SHA1: 1a7fb041782e50156e1a35b8f8df38e4a59b9f68
+MD5sum: ad32b795f8813596464b70bcb02c04ac
 Description: Read-only command-line interface for Google services
 
 Package: jtk
