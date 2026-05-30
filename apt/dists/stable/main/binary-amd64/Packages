@@ -47,19 +47,19 @@ MD5sum: deaa563809b44bddc5faf7580970d83e
 Description: Command-line interface for Jira Cloud
 
 Package: nrq
-Version: 1.0.46
+Version: 1.0.47
 Architecture: amd64
 Architecture-Variant: amd64v1
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
-Installed-Size: 29480
+Installed-Size: 10045
 Homepage: https://github.com/open-cli-collective/newrelic-cli
 Priority: optional
 Section: 
-Filename: pool/main/n/nrq/nrq_1.0.46_amd64.deb
-Size: 10379096
-SHA256: 27379f89a28981467004709cd462ca126c285a784abbdb1c0834c3d7f68840e6
-SHA1: 3feb182518432c88c43d8a7e2abf4646bca9d4cf
-MD5sum: 64839833b757b37cfd3ec2c928a05557
+Filename: pool/main/n/nrq/nrq_1.0.47_amd64.deb
+Size: 4175052
+SHA256: 854a7a1edef194ed1969be255f142af8896aefedb032306e3f25885852d25334
+SHA1: 8a515281ce475cb5b457dc4ab0da46bd725f420d
+MD5sum: 23724a83a98b043b872153a2e6e0e370
 Description: Command-line interface for New Relic
 
 Package: sfdc
