@@ -1,28 +1,28 @@
 Origin: Open CLI Collective
 Label: Open CLI Collective
 Codename: stable
-Date: Tue, 16 Jun 2026 20:02:18 UTC
+Date: Tue, 16 Jun 2026 20:37:15 UTC
 Architectures: amd64 arm64
 Components: main
 Description: Open CLI Collective APT Repository
 MD5Sum:
- 699f3220ba313d3b5bc80bf60fd1e6ed 3833 main/binary-amd64/Packages
- 7ad2aebe886548c1055a2daaba80ca16 1301 main/binary-amd64/Packages.gz
+ 160596f4ddb414305def5d5605d97f9c 3833 main/binary-amd64/Packages
+ 252b0873ae72b51d7a854acff2612cdd 1305 main/binary-amd64/Packages.gz
  f93fc557e532ce960a4e462f74d1fdce 139 main/binary-amd64/Release
- 0034123c30874c11f39fcc0647b48646 3652 main/binary-arm64/Packages
- 85b4ea9af8e2cfcc65bb65f0905c36b8 1283 main/binary-arm64/Packages.gz
+ c76f1ed6e6950b9e7d2bbabad9274e76 3652 main/binary-arm64/Packages
+ cb42d558aa0a22753888a51a170f3993 1284 main/binary-arm64/Packages.gz
  48140e14670c374fa4a47df7700581f1 139 main/binary-arm64/Release
 SHA1:
- 97e49c997e366af788a2f07f8c366a45a616f54a 3833 main/binary-amd64/Packages
- 0dd6c574a0d0c31b10af826b076a9c1762b72b0e 1301 main/binary-amd64/Packages.gz
+ dcc4a786c5350704abc0165ceaf20977d4fb6d6c 3833 main/binary-amd64/Packages
+ 4c92f1ab5774e590a11be981e03c7d0d77a1ac0f 1305 main/binary-amd64/Packages.gz
  e7a9bf215088d768f3d5a2b8838129502bb8ba6a 139 main/binary-amd64/Release
- c8a5b3461cb22f9e1a038921150b16c96d1d0a22 3652 main/binary-arm64/Packages
- 88cdbf5eb6f89f9330613b31d3afe32dac1e0060 1283 main/binary-arm64/Packages.gz
+ 63096f16d250265620c3a446fd0ad51c16af3333 3652 main/binary-arm64/Packages
+ 24a5e43d5ac64bd2b76b12bbb46fa050111e6910 1284 main/binary-arm64/Packages.gz
  c96393e95b0ad91aabebc328051f962459f55d67 139 main/binary-arm64/Release
 SHA256:
- 8575af292497c619236d72c73647c6e2325bcfa7b93c28c7ab436ec784b8b8d7 3833 main/binary-amd64/Packages
- fb6e772de6099723596d5041e79b596bf5faf5aa7ccc47a17772f66e04a7f0ac 1301 main/binary-amd64/Packages.gz
+ b99e4dac00e1d9dc07408fdde3c2a57e6aff85f321427bd156dc9d040d499674 3833 main/binary-amd64/Packages
+ 49f73f08be17284e45687ad8a983b18674e7dd2dfd4eb095b74bb94ce94e01f8 1305 main/binary-amd64/Packages.gz
  2922b55811da9036f595a9a71e94080ad262af6201eb2b5080b18f2fa0925425 139 main/binary-amd64/Release
- cc24688f5cb6b70dae35e2d8dee15371fa8dab70c88549ae5fea3b4d057a0800 3652 main/binary-arm64/Packages
- b0aa6f45c426a20c6527a05f924ad82bdec13a5853c941fd77425de5aee0ae23 1283 main/binary-arm64/Packages.gz
+ 7ce8c8c890d19224c393b08896da02e172a971d5cf5eed73f961f58b20de39b8 3652 main/binary-arm64/Packages
+ ed4adbfd1abdf39186915a39a7a9ede5b88640ac3ac2c0fda9377dabdfc719e0 1284 main/binary-arm64/Packages.gz
  0924bf407e9490983bd82d685285268233aed8e8cafbcbdd4cfa10e9ffe72af8 139 main/binary-arm64/Release
