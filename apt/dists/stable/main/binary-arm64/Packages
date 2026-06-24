@@ -1,16 +1,16 @@
 Package: cfl
-Version: 1.3.67
+Version: 1.3.69
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 12417
 Homepage: https://github.com/open-cli-collective/atlassian-cli
 Priority: optional
 Section: 
-Filename: pool/main/c/cfl/cfl_1.3.67_arm64.deb
-Size: 4805662
-SHA256: 7862738b530677125918615df2068616c30e5ef038f9378357d1fc4f1742a874
-SHA1: ad017fe32ec345a41068d93ae1ee24bfcc69ffa0
-MD5sum: 77fb15f70162146a568454c139414551
+Filename: pool/main/c/cfl/cfl_1.3.69_arm64.deb
+Size: 4809474
+SHA256: c779891658e836113ebbb567e2cd68687a7357d211780c63ec8b0eaaf090e72e
+SHA1: f9408c2e52c38bdf2e834e1f47016cce9d56fbba
+MD5sum: 88dce01c73f7d0e242956e030fdd9da5
 Description: Command-line interface for Atlassian Confluence Cloud
 
 Package: cr
