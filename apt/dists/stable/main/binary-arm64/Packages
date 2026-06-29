@@ -14,18 +14,18 @@ MD5sum: d6c3bb698a388b31d84a9322d45fc1e7
 Description: Command-line interface for Atlassian Confluence Cloud
 
 Package: cr
-Version: 0.10.193
+Version: 0.10.194
 Architecture: arm64
 Maintainer: Open CLI Collective <open-cli-collective@users.noreply.github.com>
 Installed-Size: 17025
 Homepage: https://github.com/open-cli-collective/codereview-cli
 Priority: optional
 Section: 
-Filename: pool/main/c/cr/cr_0.10.193_arm64.deb
-Size: 6775666
-SHA256: 9904ceec6616c0312967904bbb28030c222c070bc5ef9f1077e0cf6bfbfa2f81
-SHA1: 478c71d86a595ebf73209b3b15e91bd1f12d8a73
-MD5sum: e8b7339706fd8d0f196aa4b0b75b57b9
+Filename: pool/main/c/cr/cr_0.10.194_arm64.deb
+Size: 6775308
+SHA256: 071d97cff973f38f93aa54b6cd90c227fd3541b08eb8233b2e4f5481d6691d4d
+SHA1: bf9c2e35326f781ec82371cc90dc814380120358
+MD5sum: dca3cdafc74ec5c5102756f64a0750fe
 Description: Automated pull-request review CLI
 
 Package: google-readonly
