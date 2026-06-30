@@ -1,0 +1,14 @@
+name: linux-repo-integrity
+description: Reviews APT/RPM repository integrity and package publishing workflow safety.
+model_tier: small
+effort: low
+file_globs:
+  - .github/workflows/**
+  - apt/**
+  - rpm/**
+  - keys/**
+  - README*
+  - .codereview/**
+applies_when:
+  - Changes may affect APT or RPM repository integrity, signing, publishing, or metadata consistency.
+needs_full_file_content: false
