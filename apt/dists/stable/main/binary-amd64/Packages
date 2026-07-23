@@ -143,18 +143,18 @@ MD5sum: 7fcfc734ca5d968ec30de12b73e02d06
 Description: Command-line interface for Slack
 
 Package: spotify-cli
-Version: 0.1.1
+Version: 0.1.2
 Architecture: amd64
 Architecture-Variant: amd64v1
 Maintainer: Open CLI Collective <open-cli-collective@users.noreply.github.com>
-Installed-Size: 12361
+Installed-Size: 12397
 Homepage: https://github.com/open-cli-collective/spotify-cli
 Priority: optional
 Section: 
-Filename: pool/main/s/spotify-cli/spotify-cli_0.1.1_amd64.deb
-Size: 4946724
-SHA256: 80ac5ee0a2a55c70d11e0a75fdb7b9eaa8e336b7a4a7797b5ffff48658dd6ac1
-SHA1: 96cf3e4fa897fd9c0d992d646033866fb34d1a68
-MD5sum: a21a948d80ee8d08c675a804c0430ec8
+Filename: pool/main/s/spotify-cli/spotify-cli_0.1.2_amd64.deb
+Size: 4956368
+SHA256: a015d46ae7057ace572230627ef45b3664f5b12ce99ccfab90cb2c151d8c4ed7
+SHA1: 3b23234a382447435bfce5d634923a0164e7fdeb
+MD5sum: 3ec301b94b61e04d88307590a98db7a2
 Description: Spotify from the command line
 
