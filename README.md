@@ -43,6 +43,7 @@ sudo dnf install cfl jtk sfdc  # or any package from the table below
 | `google-readonly` | Google read-only CLI (Gmail, Calendar, Contacts) | [google-readonly](https://github.com/open-cli-collective/google-readonly) |
 | `jtk` | Jira Cloud CLI | [atlassian-cli](https://github.com/open-cli-collective/atlassian-cli) |
 | `nrq` | New Relic CLI | [newrelic-cli](https://github.com/open-cli-collective/newrelic-cli) |
+| `retune` | Desktop music player for local files and Spotify | [Retune](https://github.com/open-cli-collective/Retune) |
 | `sfdc` | Salesforce CLI | [salesforce-cli](https://github.com/open-cli-collective/salesforce-cli) |
 | `slck` | Slack CLI | [slack-chat-api](https://github.com/open-cli-collective/slack-chat-api) |
 
