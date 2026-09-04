@@ -1,6 +1,6 @@
 # Open CLI Collective Linux Packages
 
-APT and RPM repositories for Open CLI Collective command-line tools.
+APT, RPM, and Arch Linux repositories for Open CLI Collective command-line tools.
 
 ## Installation
 
@@ -34,6 +34,34 @@ EOF
 # Install
 sudo dnf install cfl jtk sfdc  # or any package from the table below
 ```
+
+### Arch Linux (pacman)
+
+```bash
+# Import and locally sign the repository signing key.
+key_file=$(mktemp)
+curl -fsSL https://open-cli-collective.github.io/linux-packages/keys/gpg.asc \
+  -o "$key_file"
+fingerprint=$(gpg --with-colons --import-options show-only --import "$key_file" 2>/dev/null \
+  | awk -F: '$1 == "fpr" { print $10; exit }')
+sudo pacman-key --add "$key_file"
+sudo pacman-key --lsign-key "$fingerprint"
+rm -f "$key_file"
+
+# Add the repository.
+sudo tee -a /etc/pacman.conf <<'EOF'
+[open-cli-collective]
+SigLevel = Required DatabaseOptional
+Server = https://open-cli-collective.github.io/linux-packages/arch/$arch
+EOF
+
+sudo pacman -Syu
+sudo pacman -S google-readonly google-readwrite
+```
+
+Arch Linux officially supports `x86_64`. The repository also publishes
+`aarch64` packages for compatible Arch Linux ARM systems when source releases
+provide them.
 
 ## Available Packages
 
@@ -71,6 +99,7 @@ nfpms:
     formats:
       - deb
       - rpm
+      - archlinux
     bindir: /usr/bin
     contents:
       - src: LICENSE
@@ -113,32 +142,30 @@ Add the new package to the "Available Packages" table above.
 ### Architecture
 
 ```
-┌─────────────────────┐
-│   Source Repo        │
-│ (e.g. atlassian-cli) │
-└─────────┬───────────┘
-          │ 1. Release tagged
-          ▼
-┌─────────────────────┐
-│    GoReleaser       │
-│ - Builds .deb/.rpm  │
-│ - Attaches to release│
-└─────────┬───────────┘
-          │ 2. repository_dispatch
-          ▼
-┌─────────────────────┐
-│  linux-packages     │
-│ - Downloads packages│
-│ - Signs with GPG    │
-│ - Updates repo index│
-└─────────┬───────────┘
-          │ 3. Push to main
-          ▼
-┌─────────────────────┐
-│   GitHub Pages      │
-│ - Serves APT repo   │
-│ - Serves RPM repo   │
-└─────────────────────┘
+┌──────────────────────────────────────────┐
+│            Source repository             │
+│           (e.g. atlassian-cli)           │
+└─────────────────────┬────────────────────┘
+                      │ 1. Release tagged
+                      ▼
+┌──────────────────────────────────────────┐
+│                GoReleaser                │
+│ - Creates .deb, .rpm, and .pkg.tar.zst   │
+│ - Attaches packages to the release       │
+└─────────────────────┬────────────────────┘
+                      │ 2. repository_dispatch
+                      ▼
+┌──────────────────────────────────────────┐
+│              linux-packages              │
+│ - Downloads and signs packages           │
+│ - Updates repository indexes             │
+└─────────────────────┬────────────────────┘
+                      │ 3. Push to main
+                      ▼
+┌──────────────────────────────────────────┐
+│               GitHub Pages               │
+│ - Serves APT, RPM, and pacman repos      │
+└──────────────────────────────────────────┘
 ```
 
 ### GPG Key Setup (One-Time)
