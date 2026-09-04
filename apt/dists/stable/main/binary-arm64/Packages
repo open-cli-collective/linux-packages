@@ -29,33 +29,33 @@ MD5sum: d5c1ea5064afc718d4531071ac05b5fc
 Description: Automated pull-request review CLI
 
 Package: google-readonly
-Version: 1.2.5
+Version: 1.2.7
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 20801
 Homepage: https://github.com/open-cli-collective/google-cli
 Priority: optional
 Section: 
-Filename: pool/main/g/google-readonly/google-readonly_1.2.5_arm64.deb
-Size: 7454172
-SHA256: 8d480a9e68e698dba14b8500e7dbfb70f4d0f851930d1618e7d77fbe02d66a01
-SHA1: e095bc4e1627e39251762da7178aa69270994229
-MD5sum: 6a23b213293a3dd1b5b79885c3d23703
+Filename: pool/main/g/google-readonly/google-readonly_1.2.7_arm64.deb
+Size: 7455648
+SHA256: 3d5b6ea1e7cb9d3b8b3743c14dfdf065822e7efb9a1637c37e08ce8dd2624487
+SHA1: d99c6e9100df72e4b7c7e6f2e4aa2a1d5d5d9e4a
+MD5sum: 184589b5db69897dff6468bbd4314dc9
 Description: Read-only command-line interface for Google services
 
 Package: google-readwrite
-Version: 1.2.5
+Version: 1.2.7
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 20993
 Homepage: https://github.com/open-cli-collective/google-cli
 Priority: optional
 Section: 
-Filename: pool/main/g/google-readwrite/google-readwrite_1.2.5_arm64.deb
-Size: 7518082
-SHA256: 67936f191c1cf5c6f03b255383b2a6e695c94d281a1c6bc7a47d2d1b929648ca
-SHA1: 63a0c49fc0ce9180dd8c7dddb814c1efb537e41f
-MD5sum: 20df02d0c9c0075e3f1351dc4550772b
+Filename: pool/main/g/google-readwrite/google-readwrite_1.2.7_arm64.deb
+Size: 7519698
+SHA256: e4abec4fdeb4975579474f2e3f98d9f1164a3b8cfaf096fd2681618f9c513ea2
+SHA1: 8fc589039c8a4c6241aff9c5e960bb1ac3310d21
+MD5sum: f84835fa37c3dc228cf371b87c3660bc
 Description: Read-write command-line interface for Google services
 
 Package: hspt
