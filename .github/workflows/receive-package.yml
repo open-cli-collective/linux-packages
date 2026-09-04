@@ -15,6 +15,10 @@ on:
         description: 'Source repo (e.g., open-cli-collective/confluence-cli)'
         required: true
 
+concurrency:
+  group: linux-package-repository-update
+  cancel-in-progress: false
+
 jobs:
   update-repos:
     runs-on: ubuntu-latest
@@ -36,7 +40,8 @@ jobs:
       - name: Install tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y reprepro createrepo-c
+          sudo apt-get install -y reprepro createrepo-c libarchive-tools pacman-package-manager
+          command -v repo-add
 
       - name: Import GPG key
         env:
@@ -81,24 +86,27 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          VERSION_NUM=${VERSION#v}  # Remove 'v' prefix if present
+          set -euo pipefail
+          mkdir -p ./downloads
 
           echo "Downloading packages for $PACKAGE version $VERSION from $REPO"
 
-          # Download .deb files
-          gh release download "$VERSION" \
-            --repo "$REPO" \
-            --pattern "*.deb" \
-            --dir ./downloads || echo "No .deb files found"
+          for pattern in \
+            "${PACKAGE}_*.deb" \
+            "${PACKAGE}_*.rpm" \
+            "${PACKAGE}_*.pkg.tar.zst"; do
+            gh release download "$VERSION" \
+              --repo "$REPO" \
+              --pattern "$pattern" \
+              --dir ./downloads || echo "No files found for $pattern"
+          done
 
-          # Download .rpm files
-          gh release download "$VERSION" \
-            --repo "$REPO" \
-            --pattern "*.rpm" \
-            --dir ./downloads || echo "No .rpm files found"
-
-          echo "Downloaded files:"
-          ls -la ./downloads/ || echo "No files downloaded"
+          if compgen -G './downloads/*' > /dev/null; then
+            echo "Downloaded files:"
+            ls -la ./downloads/
+          else
+            echo "No files downloaded"
+          fi
 
       - name: Update APT repository
         run: |
@@ -141,6 +149,43 @@ jobs:
           else
             echo "No .rpm packages to add"
           fi
+
+      - name: Update Arch Linux repository
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          packages=(./downloads/*.pkg.tar.zst)
+
+          if (( ${#packages[@]} == 0 )); then
+            echo "No Arch Linux packages to add"
+            exit 0
+          fi
+
+          for package in "${packages[@]}"; do
+            package_arch=$(bsdtar -xOf "$package" .PKGINFO |
+              awk -F ' = ' '$1 == "arch" { print $2; exit }')
+            case "$package_arch" in
+              x86_64|aarch64) ;;
+              *)
+                echo "Unsupported Arch Linux package architecture: $package_arch" >&2
+                exit 1
+                ;;
+            esac
+
+            repo_dir="arch/$package_arch"
+            mkdir -p "$repo_dir"
+
+            cp "$package" "$repo_dir/"
+            package_name=$(basename "$package")
+            (
+              cd "$repo_dir"
+              gpg --batch --yes --detach-sign "$package_name"
+              repo-add --remove --sign --key "$GPG_KEY_ID" \
+                open-cli-collective.db.tar.gz "$package_name"
+            )
+          done
+
+          echo "Arch Linux repository updated"
 
       - name: Cleanup downloads
         run: rm -rf ./downloads
