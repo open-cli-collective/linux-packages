@@ -104,18 +104,18 @@ MD5sum: 2f19dc00bf5af24fc4f9f7c2965889b4
 Description: Command-line interface for New Relic
 
 Package: retune
-Version: 0.3.16
+Version: 0.3.18
 Architecture: arm64
-Installed-Size: 47849
+Installed-Size: 47860
 Maintainer: rianjs
 Depends: libwebkit2gtk-4.1-0, libgtk-3-0
 Priority: optional
 Section: sound
-Filename: pool/main/r/retune/retune_0.3.16_arm64.deb
-Size: 15884464
-SHA256: 4bd78f3ec88e25a9c0d539087f3b8272463a5e23439b9530777d9f229090411b
-SHA1: 40e7de34c6885b449a555436331d498fc60c6f78
-MD5sum: 3cc2719a6ae424d3dba13338c81c9da8
+Filename: pool/main/r/retune/retune_0.3.18_arm64.deb
+Size: 15884012
+SHA256: a05a05e0d61c103079abb2eb05c0115988230c59080240791f0f9572eb19be02
+SHA1: 6e533f67b8b546d5438c0f37ede39c13004950f7
+MD5sum: 8ddf3b3865bab97d8b21eb4d386d5480
 Description: Retune desktop shell — iTunes-style Spotify wrapper with local metadata overlay
  (none)
 
