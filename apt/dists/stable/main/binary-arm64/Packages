@@ -74,18 +74,18 @@ MD5sum: dd83eeb6c442d7462c151c463558fb3f
 Description: Command-line interface for HubSpot
 
 Package: jtk
-Version: 1.3.171
+Version: 1.3.172
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 12481
 Homepage: https://github.com/open-cli-collective/atlassian-cli
 Priority: optional
 Section: 
-Filename: pool/main/j/jtk/jtk_1.3.171_arm64.deb
-Size: 4749036
-SHA256: af04b45686d170d40331ce3c6f7bb5628c1c5c9cbdc1d474f5f5752e5aaaed8e
-SHA1: a4bcc968029d660cfddc66d5653cc35e3f20b9c9
-MD5sum: 66609b91b55a3421cb16c5329c2a8318
+Filename: pool/main/j/jtk/jtk_1.3.172_arm64.deb
+Size: 4749954
+SHA256: ed0d1b9ceb556f6e71e81e5f8d60fbda6d52a1e344474e628519dffa104ccf2b
+SHA1: 7c9093bc762208c8c73d70b99dffb171959a898e
+MD5sum: cc57607eaed46d3bd1780dad526ebcb2
 Description: Command-line interface for Jira Cloud
 
 Package: nrq
