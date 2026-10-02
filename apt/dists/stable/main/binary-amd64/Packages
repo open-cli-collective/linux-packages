@@ -138,18 +138,18 @@ MD5sum: 0f2181fefe54f6f8483b3eff6c89a114
 Description: Command-line interface for Salesforce
 
 Package: slck
-Version: 3.2.73
+Version: 3.2.74
 Architecture: amd64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 10041
 Homepage: https://github.com/open-cli-collective/slack-chat-api
 Priority: optional
 Section: 
-Filename: pool/main/s/slck/slck_3.2.73_amd64.deb
-Size: 4164654
-SHA256: 3ae502e5c5b5f5a34ca327522478dac20c94b7ab33956a34dc59de4f7d8eebfc
-SHA1: 88097bf8c76bd52577faaf56f4b919184fad19d6
-MD5sum: 0d418626b9e4ca375ad2c17ec19b3d6b
+Filename: pool/main/s/slck/slck_3.2.74_amd64.deb
+Size: 4164640
+SHA256: a4f36102674d5651443689f4629727d1d8072dca709a167a88bdc1777d84ed37
+SHA1: 44a04b65943d61e2ab2ea9d7c29e443dd63322d2
+MD5sum: 5ebc3c4a6a7ca94f099de60659008add
 Description: Command-line interface for Slack
 
 Package: spotify-cli
