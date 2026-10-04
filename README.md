@@ -44,6 +44,12 @@ curl -fsSL https://open-cli-collective.github.io/linux-packages/keys/gpg.asc \
   -o "$key_file"
 fingerprint=$(gpg --with-colons --import-options show-only --import "$key_file" 2>/dev/null \
   | awk -F: '$1 == "fpr" { print $10; exit }')
+# Check the repository's pinned primary key before trusting it.
+[ "$fingerprint" = "1CB5DA9AA0FC049E7D75966B631EF017ACC6C776" ] || {
+  echo "Unexpected repository signing key" >&2
+  rm -f "$key_file"
+  exit 1
+}
 sudo pacman-key --add "$key_file"
 sudo pacman-key --lsign-key "$fingerprint"
 rm -f "$key_file"
@@ -55,9 +61,15 @@ SigLevel = Required DatabaseOptional
 Server = https://open-cli-collective.github.io/linux-packages/arch/$arch
 EOF
 
-sudo pacman -Syu
-sudo pacman -S google-readonly google-readwrite
+# Install the package you want; see the inventory below for other names.
+sudo pacman -Syu cr
 ```
+
+The pacman channel currently contains `cr`, `google-readonly`, and
+`google-readwrite`. Other packages in the inventory require their Arch-enabled
+release publication to finish before installation. After enrollment, `sudo pacman -Syu`
+updates these packages alongside the rest of the system. Repository setup is a
+one-time step; do not append the same repository stanza more than once.
 
 Arch Linux officially supports `x86_64`. The repository also publishes
 `aarch64` packages for compatible Arch Linux ARM systems when source releases
@@ -67,8 +79,13 @@ provide them.
 
 | Package | Description | Source Repo |
 |---------|-------------|-------------|
+| `cr` | Automated pull-request review CLI | [codereview-cli](https://github.com/open-cli-collective/codereview-cli) |
+| `cpm` | TUI for managing Claude Code plugins | [cpm](https://github.com/open-cli-collective/cpm) |
+| `hspt` | HubSpot CLI | [hubspot-cli](https://github.com/open-cli-collective/hubspot-cli) |
+| `spotify-cli` | Spotify CLI (`sptfy`) | [spotify-cli](https://github.com/open-cli-collective/spotify-cli) |
 | `cfl` | Confluence Cloud CLI | [atlassian-cli](https://github.com/open-cli-collective/atlassian-cli) |
-| `google-readonly` | Google read-only CLI (Gmail, Calendar, Contacts) | [google-readonly](https://github.com/open-cli-collective/google-readonly) |
+| `google-readonly` | Google read-only CLI (Gmail, Calendar, Contacts) | [google-cli](https://github.com/open-cli-collective/google-cli) |
+| `google-readwrite` | Google read-write CLI (`grw`) | [google-cli](https://github.com/open-cli-collective/google-cli) |
 | `jtk` | Jira Cloud CLI | [atlassian-cli](https://github.com/open-cli-collective/atlassian-cli) |
 | `nrq` | New Relic CLI | [newrelic-cli](https://github.com/open-cli-collective/newrelic-cli) |
 | `retune` | Desktop music player for local files and Spotify | [Retune](https://github.com/open-cli-collective/Retune) |
@@ -100,6 +117,7 @@ nfpms:
       - deb
       - rpm
       - archlinux
+    mtime: "{{ .CommitDate }}"
     bindir: /usr/bin
     contents:
       - src: LICENSE
