@@ -44,18 +44,18 @@ MD5sum: 5d56d9b64c98c1c46934dddaaed322d4
 Description: Automated pull-request review CLI
 
 Package: google-readonly
-Version: 2.0.12
+Version: 2.0.15
 Architecture: amd64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
-Installed-Size: 22313
+Installed-Size: 22349
 Homepage: https://github.com/open-cli-collective/google-cli
 Priority: optional
 Section: 
-Filename: pool/main/g/google-readonly/google-readonly_2.0.12_amd64.deb
-Size: 8209284
-SHA256: f96bd3e8c618dc9f9e54317074f601fb7c32925ad2a2e6644a58aed6e1a74a65
-SHA1: 8c999d7a2539f950122f126dca8f45d57515d2e0
-MD5sum: e5ec4d42b779342f2ca3aee1d73546f1
+Filename: pool/main/g/google-readonly/google-readonly_2.0.15_amd64.deb
+Size: 8226656
+SHA256: 6f6fd77ff7ca43c4fee1755d029a72c01ebb119a93bbfce397fecac7a35a90f0
+SHA1: 9a30b4b6a1819a095ee394ff39595df73045edfd
+MD5sum: 2814b2f61cae6d8ef32e5689abbf05ba
 Description: Read-only command-line interface for Google services
 
 Package: google-readwrite
