@@ -59,18 +59,18 @@ MD5sum: 7997c6bb1fd7ba64fb5d4d7a31c39c33
 Description: Read-only command-line interface for Google services
 
 Package: google-readwrite
-Version: 2.0.13
+Version: 2.0.15
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 21057
 Homepage: https://github.com/open-cli-collective/google-cli
 Priority: optional
 Section: 
-Filename: pool/main/g/google-readwrite/google-readwrite_2.0.13_arm64.deb
-Size: 7533372
-SHA256: a20500975057c609615927874e1f08e5bd4ebc01cd383a51dc3d196a2477d2c5
-SHA1: 3cdccc59508e14e7f73bcfec27c6880d7b895671
-MD5sum: 5cf43b04c64a69257ffdc475572f33ec
+Filename: pool/main/g/google-readwrite/google-readwrite_2.0.15_arm64.deb
+Size: 7533358
+SHA256: 10ba3e166c22dfc7cb195d122a13196c61aa4225e0f4da81b672a0b9a6ec8fe3
+SHA1: 40537bbe0df37d4760a718d0c70382e497582a12
+MD5sum: 204a02d683cf08238ab17de760ce2b0c
 Description: Read-write command-line interface for Google services
 
 Package: hspt
