@@ -35,7 +35,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          # Only the current repository tree is needed to add/sign packages.
+          # Historical package blobs make full-history fetches very expensive.
+          fetch-depth: 1
 
       - name: Install tools
         run: |
