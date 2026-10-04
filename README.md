@@ -77,8 +77,10 @@ omarchy pkg add cr
 ```
 
 Omarchy's update command handles snapshots, migrations, and system package
-updates together. Use a package name from the inventory below in place of `cr`
-to install another tool. Subsequent system updates also update packages from
+updates together. Arch availability depends on published source releases. After
+updating, list the packages currently available with `pacman -Sl open-cli-collective`
+and use one of those package names in place of `cr` to install another tool.
+Subsequent system updates also update packages from
 this repository. Repository setup is a one-time step; do not append the same
 repository stanza more than once.
 
