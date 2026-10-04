@@ -61,14 +61,13 @@ SigLevel = Required DatabaseOptional
 Server = https://open-cli-collective.github.io/linux-packages/arch/$arch
 EOF
 
-# Packages become available after their release publication finishes.
-sudo pacman -Syu cr slck cfl jtk hspt sfdc nrq cpm spotify-cli retune \
-  google-readonly google-readwrite
+# Install the package you want; see the inventory below for other names.
+sudo pacman -Syu cr
 ```
 
-The pacman channel currently contains `google-readonly` and `google-readwrite`.
-The remaining packages above require their Arch-enabled release to finish before
-the combined install command succeeds. After enrollment, `sudo pacman -Syu`
+The pacman channel currently contains `cr`, `google-readonly`, and
+`google-readwrite`. Other packages in the inventory require their Arch-enabled
+release publication to finish before installation. After enrollment, `sudo pacman -Syu`
 updates these packages alongside the rest of the system. Repository setup is a
 one-time step; do not append the same repository stanza more than once.
 
