@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  workflows:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - name: Validate workflows with checksum-verified Actionlint
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tools=$(mktemp -d)
+          gh release download v1.7.12 --repo rhysd/actionlint \
+            --pattern actionlint_1.7.12_linux_amd64.tar.gz \
+            --pattern actionlint_1.7.12_checksums.txt --dir "$tools"
+          (cd "$tools"; sha256sum -c actionlint_1.7.12_checksums.txt --ignore-missing)
+          tar -xzf "$tools/actionlint_1.7.12_linux_amd64.tar.gz" -C "$tools" actionlint
+          "$tools/actionlint"

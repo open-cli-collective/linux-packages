@@ -118,6 +118,7 @@ nfpms:
       - deb
       - rpm
       - archlinux
+    mtime: "{{ .CommitDate }}"
     bindir: /usr/bin
     contents:
       - src: LICENSE
