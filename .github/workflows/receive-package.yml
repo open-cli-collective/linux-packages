@@ -79,7 +79,7 @@ jobs:
 
           # Get the key ID
           KEY_ID=$(gpg --list-secret-keys --keyid-format LONG | grep sec | head -1 | awk '{print $2}' | cut -d'/' -f2)
-          echo "GPG_KEY_ID=$KEY_ID" >> $GITHUB_ENV
+          echo "GPG_KEY_ID=$KEY_ID" >> "$GITHUB_ENV"
 
           # Test signing works
           echo "test" | gpg --batch --sign > /dev/null 2>&1 && echo "GPG signing test passed" || echo "GPG signing test failed"
@@ -203,11 +203,11 @@ jobs:
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
-            echo "HAS_CHANGES=false" >> $GITHUB_ENV
+            echo "HAS_CHANGES=false" >> "$GITHUB_ENV"
           else
             git commit -m "feat: update $PACKAGE to $VERSION"
             git push
-            echo "HAS_CHANGES=true" >> $GITHUB_ENV
+            echo "HAS_CHANGES=true" >> "$GITHUB_ENV"
           fi
 
       - name: Trigger Pages deployment
