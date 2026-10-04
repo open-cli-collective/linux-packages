@@ -61,15 +61,26 @@ SigLevel = Required DatabaseOptional
 Server = https://open-cli-collective.github.io/linux-packages/arch/$arch
 EOF
 
-# Install the package you want; see the inventory below for other names.
+```
+
+After enrollment, install a package on Arch Linux:
+
+```bash
 sudo pacman -Syu cr
 ```
 
-The pacman channel currently contains `cr`, `google-readonly`, and
-`google-readwrite`. Other packages in the inventory require their Arch-enabled
-release publication to finish before installation. After enrollment, `sudo pacman -Syu`
-updates these packages alongside the rest of the system. Repository setup is a
-one-time step; do not append the same repository stanza more than once.
+On Omarchy, use its update and package installation commands:
+
+```bash
+omarchy update
+omarchy pkg add cr
+```
+
+Omarchy's update command handles snapshots, migrations, and system package
+updates together. Use a package name from the inventory below in place of `cr`
+to install another tool. Subsequent system updates also update packages from
+this repository. Repository setup is a one-time step; do not append the same
+repository stanza more than once.
 
 Arch Linux officially supports `x86_64`. The repository also publishes
 `aarch64` packages for compatible Arch Linux ARM systems when source releases
