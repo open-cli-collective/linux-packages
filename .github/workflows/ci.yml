@@ -26,4 +26,6 @@ jobs:
             --pattern actionlint_1.7.12_checksums.txt --dir "$tools"
           (cd "$tools"; sha256sum -c actionlint_1.7.12_checksums.txt --ignore-missing)
           tar -xzf "$tools/actionlint_1.7.12_linux_amd64.tar.gz" -C "$tools" actionlint
-          "$tools/actionlint"
+          # v1.7.12 does not yet recognize GitHub's supported queue property.
+          # Keep this exception narrow until rhysd/actionlint#657 is released.
+          "$tools/actionlint" -ignore 'unexpected key "queue" for "concurrency" section'
