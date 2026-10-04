@@ -59,19 +59,18 @@ MD5sum: 912d3ae153f86537028acfa08a31c028
 Description: Read-write command-line interface for Google services
 
 Package: hspt
-Version: 0.1.23
+Version: 0.1.25
 Architecture: amd64
-Architecture-Variant: amd64v1
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 8077
 Homepage: https://github.com/open-cli-collective/hubspot-cli
 Priority: optional
 Section: 
-Filename: pool/main/h/hspt/hspt_0.1.23_amd64.deb
-Size: 3303780
-SHA256: 70a2f439fa5847340616ff764ec1d31f46eeead85e831391d4285562260aec92
-SHA1: dc9affad7cc66a9ed4aeac7efa8337075c66dc3d
-MD5sum: 8c9d73f027d32cbce4d94dc98bea8a4f
+Filename: pool/main/h/hspt/hspt_0.1.25_amd64.deb
+Size: 3298940
+SHA256: 5365ddee561e77de10afaafb458cff1ebb1a1dde86ae6eaf40a070dc20420312
+SHA1: 40f51d5bae944c8cca371773bf6f6455f57517b2
+MD5sum: 65263a1eb75d2c685d2e215375336dd2
 Description: Command-line interface for HubSpot
 
 Package: jtk
