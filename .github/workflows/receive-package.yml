@@ -17,6 +17,8 @@ on:
 
 concurrency:
   group: linux-package-repository-update
+  # Preserve every package dispatch during multi-repository release trains.
+  queue: max
   cancel-in-progress: false
 
 jobs:
@@ -35,6 +37,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          # A queued dispatch may carry an older event SHA; fetch the latest
+          # branch after acquiring the concurrency slot to keep pushes current.
+          ref: main
           # Only the current repository tree is needed to add/sign packages.
           # Historical package blobs make full-history fetches very expensive.
           fetch-depth: 1
