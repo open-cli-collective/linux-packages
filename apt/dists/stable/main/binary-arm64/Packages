@@ -74,18 +74,18 @@ MD5sum: 204a02d683cf08238ab17de760ce2b0c
 Description: Read-write command-line interface for Google services
 
 Package: granola
-Version: 0.1.2
+Version: 0.1.3
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 9345
 Homepage: https://github.com/open-cli-collective/granola-cli
 Priority: optional
 Section: 
-Filename: pool/main/g/granola/granola_0.1.2_arm64.deb
-Size: 3719330
-SHA256: 9ca2309cbfe389ee288180372fd57b34e8a2f9eef17b4e0d0a2fb3049f861ccf
-SHA1: 52720b8bc0b450a54f3a63ff49ddddda3f949da8
-MD5sum: fdddedb36924706642c388f8ac2d9900
+Filename: pool/main/g/granola/granola_0.1.3_arm64.deb
+Size: 3719748
+SHA256: 72743cf8d9823c5bacb6ff526d5083c1e5d346b99327414343484ecb9bdf50ab
+SHA1: 05a3e75139a07183a07eea28d6b060dce6150512
+MD5sum: 5739e85892fa485c2399ee009c253448
 Description: Read-only command-line interface for Granola meeting notes
 
 Package: hspt
