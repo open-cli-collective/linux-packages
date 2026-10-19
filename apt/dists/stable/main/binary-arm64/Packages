@@ -180,18 +180,18 @@ MD5sum: 91aeaac44fa29e9bda06f8937f0da16f
 Description: Slack app steps that have no API, done in a headless browser
 
 Package: slck
-Version: 3.2.77
+Version: 3.2.78
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 9345
 Homepage: https://github.com/open-cli-collective/slack-chat-api
 Priority: optional
 Section: 
-Filename: pool/main/s/slck/slck_3.2.77_arm64.deb
-Size: 3781800
-SHA256: a983989d4656b02a14f3670d4beb85a08a9d56732d53bd519ee79f2469b73ab0
-SHA1: 0fb1471c1df7c6ef8ebe621ef2ef9ed8b1aa5f9f
-MD5sum: 18cf4719b59e577ba41e8e81cd7472db
+Filename: pool/main/s/slck/slck_3.2.78_arm64.deb
+Size: 3782348
+SHA256: 0d7b38449099f313d570f5585e3df814dd71a37121962ed33165c9348324f20f
+SHA1: 1c178e159c01255c9f333f1bc89225ee6f911d22
+MD5sum: 88975e130b5c9fd16ea67bd7bce01ae7
 Description: Command-line interface for Slack
 
 Package: spotify-cli
