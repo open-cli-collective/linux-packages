@@ -89,18 +89,18 @@ MD5sum: 5739e85892fa485c2399ee009c253448
 Description: Read-only command-line interface for Granola meeting notes
 
 Package: hspt
-Version: 0.1.25
+Version: 0.1.26
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
-Installed-Size: 7745
+Installed-Size: 8321
 Homepage: https://github.com/open-cli-collective/hubspot-cli
 Priority: optional
 Section: 
-Filename: pool/main/h/hspt/hspt_0.1.25_arm64.deb
-Size: 3048848
-SHA256: fedaefca2972dcdd6564b2a90be4ae5c19afb7c26c0b4eadc6351cbdd5cc6423
-SHA1: 84bad1aef9158b50cad80517820ecdfa99559985
-MD5sum: 6fb486295c9981e99c936c242eb8a873
+Filename: pool/main/h/hspt/hspt_0.1.26_arm64.deb
+Size: 3263216
+SHA256: a50bc9aa5304e6c735afb6fbae6c98f672a4aae4fea559d5354feaba670978b3
+SHA1: 2ebe4f6237241cd73d121b4460d3a7cb64cfe19d
+MD5sum: 5e6fc5631436d0c887d74b08368849c7
 Description: Command-line interface for HubSpot
 
 Package: jtk
