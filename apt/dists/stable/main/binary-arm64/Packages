@@ -119,18 +119,18 @@ MD5sum: e573dd7283cab1938e928d71726a9ff5
 Description: Command-line interface for Jira Cloud
 
 Package: nrq
-Version: 1.1.60
+Version: 1.1.61
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 9345
 Homepage: https://github.com/open-cli-collective/newrelic-cli
 Priority: optional
 Section: 
-Filename: pool/main/n/nrq/nrq_1.1.60_arm64.deb
-Size: 3772224
-SHA256: e221478c6b861150efa5eec70a2b32094fc0c982cad2054a210d0838f201eb0f
-SHA1: b07fcc5068ea8fe2e00ffc89559ffc617b607b6f
-MD5sum: 02c2a7b9dd308d200f7689fadd42e096
+Filename: pool/main/n/nrq/nrq_1.1.61_arm64.deb
+Size: 3780112
+SHA256: b53f2cfcbbdd2e2e78252f66d013bcc7ff9303c8a990792be08bbf7746da5d95
+SHA1: 9ee0a51d3ec2c40d35b258b7cde69af5154885e6
+MD5sum: fadf2a226c32365262203f923d0fc50a
 Description: Command-line interface for New Relic
 
 Package: retune

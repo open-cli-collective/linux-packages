@@ -4,44 +4,44 @@ Hash: SHA512
 Origin: Open CLI Collective
 Label: Open CLI Collective
 Codename: stable
-Date: Wed, 21 Oct 2026 15:14:04 UTC
+Date: Wed, 21 Oct 2026 15:27:59 UTC
 Architectures: amd64 arm64
 Components: main
 Description: Open CLI Collective APT Repository
 MD5Sum:
- 1bbcee854c3257b5663792fbd91d7bff 7317 main/binary-amd64/Packages
- 48f44d140dfd4a56e4a22b86b9ac8c94 2408 main/binary-amd64/Packages.gz
+ 9955d1e4935dfb1034050f20cdc06a1a 7317 main/binary-amd64/Packages
+ 79b5ce9d54dbe903aa789f9c9f3a8042 2408 main/binary-amd64/Packages.gz
  f93fc557e532ce960a4e462f74d1fdce 139 main/binary-amd64/Release
- 7045d58951e6773f5fbbc652fa6d45d6 7314 main/binary-arm64/Packages
- 291c4b6706600775bd1f2a907791cf07 2407 main/binary-arm64/Packages.gz
+ 3783b943649fbc43757eb312e7e64c84 7314 main/binary-arm64/Packages
+ 53904db11c338347d7a80c21b7ab4730 2407 main/binary-arm64/Packages.gz
  48140e14670c374fa4a47df7700581f1 139 main/binary-arm64/Release
 SHA1:
- 3bd2e610c5de907028eb8746b7475d15875f0106 7317 main/binary-amd64/Packages
- f604e10300be6a207325bd41ddcebcee72e2eb7d 2408 main/binary-amd64/Packages.gz
+ 75f7b1fd79e9d7a30efa074ef8f95ca3e9caed9c 7317 main/binary-amd64/Packages
+ a8474c96196d713cc3f25c99a5991cdcc2536705 2408 main/binary-amd64/Packages.gz
  e7a9bf215088d768f3d5a2b8838129502bb8ba6a 139 main/binary-amd64/Release
- be6c8ab480a75f5c7e7747fbb3869ca0331f8c66 7314 main/binary-arm64/Packages
- 357b751a18587d01443a03e57cecce0b23a23be5 2407 main/binary-arm64/Packages.gz
+ 70c385e403b1788b0b4f177c695c002a859973d0 7314 main/binary-arm64/Packages
+ 521259100061b578a1f86acb3396bfa392554f40 2407 main/binary-arm64/Packages.gz
  c96393e95b0ad91aabebc328051f962459f55d67 139 main/binary-arm64/Release
 SHA256:
- 17078efa8e38906c6db5f88df8b7f0e3b7cc10ff1a4acfda338906ad876a00e8 7317 main/binary-amd64/Packages
- 4b6fd290a24f390755cd0ed83966724967eeb7d164312498277b05d48e040b17 2408 main/binary-amd64/Packages.gz
+ bc802301f4b7305e11181cf534b322db9e69ec398a25b0991b32da00f483359e 7317 main/binary-amd64/Packages
+ c84c1d47f54dfc6e10befb38e336cdcf3e5b477fe1fe09eb17783a418ce42d5c 2408 main/binary-amd64/Packages.gz
  2922b55811da9036f595a9a71e94080ad262af6201eb2b5080b18f2fa0925425 139 main/binary-amd64/Release
- 9a5232ddfd315847dbd9053c4acdff1b312f664b5a165931aa743805858d538d 7314 main/binary-arm64/Packages
- 71aba9d46bd16f560d8fd99fc6c9f5bb17121183788508b9ae1d8e0cd44a79b9 2407 main/binary-arm64/Packages.gz
+ e1cea72d23a6a757b44d8b3df3ff8c3a41e98cf124f10ad232b9a904d1a4179b 7314 main/binary-arm64/Packages
+ a6f7f720da86c79908d58d5a5c37750a360f8f25b2e6d4cb3a6faa02f697187e 2407 main/binary-arm64/Packages.gz
  0924bf407e9490983bd82d685285268233aed8e8cafbcbdd4cfa10e9ffe72af8 139 main/binary-arm64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEHLXamqD8BJ59dZZrYx7wF6zGx3YFAmrY1r0ACgkQYx7wF6zG
-x3aXag/+KWMT6wYGIHWrHxjzqrK0uNe1m/8dxUryrpKrgGS58E2ErdW0vuqFTztF
-DftNWIgojAALj8a96fO03j6QziP3M/+wosyO96aeZDH6rA18qxiBQ8w8oJvXKvUJ
-qKlK+dYwn3Cmis2+mvoPme6tfztJzRgbTBrIbP1TmRlGfmoV3y8pxbVv1S8rxLix
-H+sk1pnHQbuorYMzLX7H1IglX6Emq8XljRIbvo7r6sLdwgMYMQZFIKu86NKnetEi
-eAt2vgpGtB+OdsqbQsWP8sAqubeRfaBmhkBR7uACrBiKs5AW9yIHmplbFAE4asIT
-WVjS5O1pQsn1bihiuskyS1mtxz1MrmntHpEqknSIY4DxkTLHjowYmzyrbwQHuNFC
-V9NftD2Di0PLaf/5PQXma2+e0LJaSfp6s8QX7bWZwncbbkgVklWQ9ZPurfGcELz7
-2pBY3vPlNSBV9q838+wwVPCjyW9bCuenwZQcaEIspqeQdZ08ohlFfi+iAH4B1Ajp
-y6GGbBdRsT8+Eh6cMHxMmQWIE0Mxgk1VL+PLGMw6YBRJQyZF9p4Zae9PrU9F0yCo
-xTnwtFIOcTasVCm467JfycJ0oHONla7inRvnaYsaJf6zMwIGi9H7phxzQexJWVwM
-zgGvFltz0z/Bob5/h+OkOBhyP7WZ8QYbN21pU9GSJaMWtbekxzs=
-=p/rt
+iQIzBAEBCgAdFiEEHLXamqD8BJ59dZZrYx7wF6zGx3YFAmrY2f8ACgkQYx7wF6zG
+x3ZSCA/9GvV4Ubv9ilICk0xZuyNVssCImuHOsqlvcGasJtdDLyXxFHlGdbrslEXj
+5w5o7xCTH3SRbtKkl8lUbAH41A/e2k2Qyn/Fnue1N2amHvDg1MUqi+WwPHWV3vPL
+VKKeeiub9XihJqDV/qxIKD+GA9gSUBYZ2UijEy7n23ZQPDkdyYJSBzhDD6OMcl3+
+Gzkv/kIyXE+3TgMzwaNm//QA1lidQfLunzHrSOKX3DQRrQK8PwUBsRcbWNBOsLnk
+Em1XTYimBJscJfZ0RqQOxjGlQIQQ0jemFhtccJKK1QeyUjnxABl8aZHBMXnM3UPt
+SV6814obEw1GbuNc+CAfzmPJd4JYLa7pLe9C2o8926GDE5gazsViScjCDRS1Ia8D
+feuDcKqEDr06zteNEpBIVR+je+dPhaQhjsI8svYyVSq0CZHK0ssBxf8bVhowDF+a
+M+513hf6DSoivUsrNKKmoGk+Oe9EL5TRyAhLKXGm8gbzAA59b31i726dncRpPYN7
+05xsxZ+IinYfYgTvljc9rDb9ocYGzxhjBqvypWU8hg1gfDGRpY70fOra689WL/+Z
+VoSwCW11DeBS3Rkv0Sx6vH0m+bx0e02yqW7CGUq1g7li2p5xgARcwd/r+kxWEsNm
+9aZezOIXWDP6ZEJTxFt1CD8xUple50PZOiS/0d4xN505YbSj8dg=
+=Su7N
 -----END PGP SIGNATURE-----
