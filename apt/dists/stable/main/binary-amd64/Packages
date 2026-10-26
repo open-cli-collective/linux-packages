@@ -165,18 +165,18 @@ MD5sum: 692d935dce8b6a61f71c773b703e1741
 Description: Command-line interface for Salesforce
 
 Package: slaw
-Version: 0.2.3
+Version: 0.2.7
 Architecture: amd64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
-Installed-Size: 7905
+Installed-Size: 7941
 Homepage: https://github.com/open-cli-collective/slack-app-web
 Priority: optional
 Section: 
-Filename: pool/main/s/slaw/slaw_0.2.3_amd64.deb
-Size: 3337598
-SHA256: 1cabf4b7f306bf16954ae1b24192558cb2b63f21bb69f0be52e14c247c341ba6
-SHA1: bcc55453cbca31019d4815441292351b9b4d9395
-MD5sum: fec0bfe8bc01553ebb603d4a97f533c4
+Filename: pool/main/s/slaw/slaw_0.2.7_amd64.deb
+Size: 3352650
+SHA256: 92f91f423410ac9bbf347370e49f42a4ae9638b774adf377ae898c66e7045178
+SHA1: cf8432dc20ce44ff8bc73108f624a3663c3a2d1e
+MD5sum: c4742fc9a322f5c345bf5112de233430
 Description: Slack app steps that have no API, done in a headless browser
 
 Package: slck
