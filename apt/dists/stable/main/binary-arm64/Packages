@@ -150,18 +150,18 @@ Description: Retune desktop shell — iTunes-style Spotify wrapper with local me
  (none)
 
 Package: sfdc
-Version: 0.1.11
+Version: 0.1.12
 Architecture: arm64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
 Installed-Size: 8129
 Homepage: https://github.com/open-cli-collective/salesforce-cli
 Priority: optional
 Section: 
-Filename: pool/main/s/sfdc/sfdc_0.1.11_arm64.deb
-Size: 3234362
-SHA256: 3577228abe371e55a78bc005d39d51d790ecc27e2e1802b694e0b216ccfbb5a4
-SHA1: 4e3741ccbf796ee948b38dc2f833560b147cac11
-MD5sum: fa5828b7489556e27a42fadc862f8609
+Filename: pool/main/s/sfdc/sfdc_0.1.12_arm64.deb
+Size: 3234364
+SHA256: bb997353565a0f92ab44710c94df70c703815747967cfcabedf41c9a9569f16a
+SHA1: a40d9dda02d951ede72fce5765d3da5a5cf91351
+MD5sum: fd8baf4bede1db3e0e2c79ac22140dbf
 Description: Command-line interface for Salesforce
 
 Package: slaw
