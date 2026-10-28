@@ -14,18 +14,18 @@ MD5sum: 7f40f9a54cb3e90d86a455479f474d20
 Description: Command-line interface for Atlassian Confluence Cloud
 
 Package: cpm
-Version: 0.3.8
+Version: 0.3.9
 Architecture: amd64
 Maintainer: Open CLI Collective <open-cli-collective@users.noreply.github.com>
 Installed-Size: 11461
 Homepage: https://github.com/open-cli-collective/cpm
 Priority: optional
 Section: 
-Filename: pool/main/c/cpm/cpm_0.3.8_amd64.deb
-Size: 3982582
-SHA256: 12cf95aab2fdd7f4449261e22e426f6f876ba9fe3d54ef310cc1461d8cd267d2
-SHA1: df9a2adaf2f6b233f4645a0e7eb4cc8eb3bb731d
-MD5sum: e1a9359266a2ea772ebb663ba36b1924
+Filename: pool/main/c/cpm/cpm_0.3.9_amd64.deb
+Size: 3982574
+SHA256: 8c2b8431d8d84b5cab44e0920669e1c0373654b7d82ed11d83e9f5da5e72d957
+SHA1: c71f846e40fe1ced525ae768e9b3cd0c57ba1898
+MD5sum: e7db5382ec77caa7cb39b6103276ab78
 Description: TUI for managing Claude Code plugins
 
 Package: cr
