@@ -29,18 +29,18 @@ MD5sum: f4d3b0fb3f7c58c443a7974d5cbe0227
 Description: TUI for managing Claude Code plugins
 
 Package: cr
-Version: 0.10.366
+Version: 0.10.367
 Architecture: arm64
 Maintainer: Open CLI Collective <open-cli-collective@users.noreply.github.com>
 Installed-Size: 18497
 Homepage: https://github.com/open-cli-collective/codereview-cli
 Priority: optional
 Section: 
-Filename: pool/main/c/cr/cr_0.10.366_arm64.deb
-Size: 7335836
-SHA256: 5f12408af2c7f87026e1fd008f67aea5ba3271bb9bd823863314c2eb204d9b39
-SHA1: 6849d0de983c62ee930d8f713d1048ac399ea201
-MD5sum: 32c09afca4a5e4f24079fdf3ce1f5125
+Filename: pool/main/c/cr/cr_0.10.367_arm64.deb
+Size: 7353548
+SHA256: ecde321b76b78bedce93470f53ea8d8817dc4248a563ddfd55f61c1dd5ab4ad8
+SHA1: bf17d462c8e270433efc4fe601f338260f826f6b
+MD5sum: c2d0e9e27b4ebbb923ab52fa921ddbfe
 Description: Automated pull-request review CLI
 
 Package: google-readonly
