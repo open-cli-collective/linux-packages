@@ -59,18 +59,18 @@ MD5sum: 6ec0b0c47b1445e78df279de5e0d0ae3
 Description: Read-only command-line interface for Google services
 
 Package: google-readwrite
-Version: 2.0.17
+Version: 2.0.20
 Architecture: amd64
 Maintainer: Open CLI Collective <https://github.com/open-cli-collective>
-Installed-Size: 22589
+Installed-Size: 22605
 Homepage: https://github.com/open-cli-collective/google-cli
 Priority: optional
 Section: 
-Filename: pool/main/g/google-readwrite/google-readwrite_2.0.17_amd64.deb
-Size: 8311978
-SHA256: 8af8f4c45e6d77f8eeef6b4f1618be7867e38b6dacf0fcb64f53482abfdffd23
-SHA1: eda67d406603ae3ed67f12ea494846f25010b566
-MD5sum: a89386e2a34ef3203199591107e1e7be
+Filename: pool/main/g/google-readwrite/google-readwrite_2.0.20_amd64.deb
+Size: 8318918
+SHA256: 9df0fc0f88c4abbd73074fa1e702f47944d897cbfafef2e7a33c64c571b98b7e
+SHA1: f6efb466ff788093f002c33a8f75b5e89d46905a
+MD5sum: 0a1c410dfe3d6c806d6ca46968d255d8
 Description: Read-write command-line interface for Google services
 
 Package: granola
